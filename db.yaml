@@ -6,7 +6,7 @@
   vars_prompt:
   - name: mysql_root_password
     prompt: please enter root password
-    provate: no
+    private: no
   tasks:
   - name: install mysql server
     ansible.builtin.dnf:
@@ -43,4 +43,5 @@
 
   - name: setup root password
     ansible.builtin.command: mysql_secure_installtion --set-root-pass {{mysql_root_password}}
+    when: mysql_connection_output.failed is True
 
