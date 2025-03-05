@@ -22,3 +22,11 @@
       login_user: root
       login_password: ExpenceApp@1
       login_host: "{{ login_host }}"
+      filter: version
+    ignore_errors: yes
+    register: mysql_connection_output
+
+  - name: prin output
+    ansible.builtin.debug:
+      msg: "output: {{ mysql_connection_output }}"
+
