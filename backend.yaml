@@ -1,7 +1,9 @@
 - name: configure backend server
   hosts: backend
   become: yes
-  #vars:
+  vars:
+    login_host: 172.31.30.110
+    login_password: ExpenseApp@1
 
   tasks:
   - name: disable defaulit nodejs
