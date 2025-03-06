@@ -46,7 +46,7 @@
       src: backend.service
       dest: /etc/systemd/system/backend.service
 
-    - name: install python db dependences
+  - name: install python db dependences
     ansible.builtin.pip:
       name:
       - PyMySQL
