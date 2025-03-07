@@ -19,7 +19,12 @@
       state: absent
 
   - name: create html directory
-    anisble.builtin.file:
+    ansible.builtin.file:
       path: /usr/share/nginx/html
       state: directory
-      
+
+  - name: downlaod and extraxt fronend code
+    ansible.builtin.unarchive:
+      src: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip 
+      dest: /usr/share/nginx/html 
+      remote_src: yes
