@@ -20,7 +20,7 @@
       state: started
       enabled: yes
 
-  - name: install python db ddependences
+  - name: install python db dependences
     ansible.builtin.pip:
       name:
       - PyMySQL
