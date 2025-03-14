@@ -2,7 +2,7 @@
   hosts: db
   become: yes
   vars:
-    login_host: 172.31.91.58
+    login_host: db.aleef.fun
     mysql_root_password: ExpenseApp@1 
   # vars_prompt:
   # - name: mysql_root_password
